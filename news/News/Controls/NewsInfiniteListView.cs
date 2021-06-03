@@ -1,6 +1,6 @@
 ﻿using Xamarin.Forms;
 using Lottie.Forms;
-using MobCAT.Forms.Controls;
+using Microsoft.MobCAT.Forms.Controls;
 
 namespace News.Controls
 {
@@ -26,12 +26,12 @@ namespace News.Controls
 
                 _animationView.AbortAnimation(GetHashCode().ToString());
                 _animationView.IsVisible = true;
-                _animationView.Play();
+                //_animationView.Play();
             }
             else
             {
                 _animationView.AbortAnimation(GetHashCode().ToString());
-                _animationView.IsPlaying = false;
+                //_animationView.IsPlaying = false;
                 _animationView.IsVisible = false;
                 Footer = null;
             }
@@ -47,7 +47,7 @@ namespace News.Controls
                     VerticalOptions = LayoutOptions.EndAndExpand,
                     HorizontalOptions = LayoutOptions.FillAndExpand,
                     BackgroundColor = Color.Transparent,
-                    Loop = true,
+                    //Loop = true,
                     AutoPlay = false,
                     IsVisible = false,
                     HeightRequest = 220,

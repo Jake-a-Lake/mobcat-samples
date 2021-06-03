@@ -8,7 +8,7 @@
     xmlns:cell="clr-namespace:News.ViewCells;assembly=News"
     xmlns:forms="clr-namespace:Lottie.Forms;assembly=Lottie.Forms"
     xmlns:mobcat="clr-namespace:News.Controls;assembly=News"
-    xmlns:behaviors="clr-namespace:MobCAT.Behaviors;assembly=MobCAT.Forms"
+    xmlns:behaviors="clr-namespace:MobCAT.Behaviors;assembly=MobCAT.Forms" xmlns:behaviors1="clr-namespace:Microsoft.MobCAT.Behaviors;assembly=MobCAT.Forms"
     x:TypeArguments="vm:FavoritesViewModel" 
     x:Class="News.Pages.FavoritesPage" 
     Style="{DynamicResource navBarStyle}"
@@ -79,7 +79,7 @@
                 </DataTemplate>
             </mobcat:NewsInfiniteListView.EmptyTemplate>
             <mobcat:NewsInfiniteListView.Behaviors>
-                <behaviors:ClearListViewSelectionBehavior />
+                <behaviors1:ClearListViewSelectionBehavior />
             </mobcat:NewsInfiniteListView.Behaviors>
         </mobcat:NewsInfiniteListView>
     </Grid>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -29,6 +29,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <AndroidLinkMode>None</AndroidLinkMode>
+    <AndroidSupportedAbis>x86</AndroidSupportedAbis>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -48,7 +49,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Xamarin.Forms" Version="4.4.0.991477" />
+    <PackageReference Include="Xamarin.Forms" Version="4.5.0.657" />
     <PackageReference Include="Xamarin.Android.Support.Design" Version="28.0.0.3" />
     <PackageReference Include="Xamarin.Android.Support.v7.AppCompat" Version="28.0.0.3" />
     <PackageReference Include="Xamarin.Android.Support.v4" Version="28.0.0.3" />
@@ -170,23 +171,19 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\drawable\" />
-    <Folder Include="Resources\drawable-hdpi\" />
-    <Folder Include="Resources\drawable-xhdpi\" />
-    <Folder Include="Resources\drawable-xxhdpi\" />
-    <Folder Include="Resources\drawable-xxxhdpi\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\News\News.csproj">
-      <Project>{B9BDA780-7F35-4623-8C6B-B595A8E21DCF}</Project>
-      <Name>News</Name>
-    </ProjectReference>
     <ProjectReference Include="..\..\..\mobcat-library\MobCAT\MobCAT.csproj">
-      <Project>{CF339104-1F1C-4EBE-A2A4-07A2B40AC282}</Project>
+      <Project>{cf339104-1f1c-4ebe-a2a4-07a2b40ac282}</Project>
       <Name>MobCAT</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\..\mobcat-library\MobCAT.Forms\MobCAT.Forms.csproj">
       <Project>{829DFCCA-F21D-4923-86A6-7735EEE8E326}</Project>
       <Name>MobCAT.Forms</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\News\News.csproj">
+      <Project>{b9bda780-7f35-4623-8c6b-b595a8e21dcf}</Project>
+      <Name>News</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
@@ -195,5 +192,5 @@
     <AndroidAsset Include="Assets\lottie_favorite_add.json" />
     <AndroidAsset Include="Assets\lottie_load_more.json" />
   </ItemGroup>
- <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>

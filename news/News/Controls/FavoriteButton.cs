@@ -54,10 +54,10 @@ namespace News.Controls
                     VerticalOptions = LayoutOptions.Fill,
                     HorizontalOptions = LayoutOptions.Fill,
                     BackgroundColor = Color.Transparent,
-                    Loop = false,
+                    //Loop = false,
                     AutoPlay = false,
                     IsVisible = false,
-                    PlaybackFinishedCommand = new Command(UpdateControlState),
+                    //PlaybackFinishedCommand = new Command(UpdateControlState),
                     Margin = new Thickness(0, 1, 1, 0),
                 };
             }
@@ -67,7 +67,7 @@ namespace News.Controls
         {
             if (_animationView != null)
             {
-                _animationView.IsPlaying = false;
+                //_animationView.IsPlaying = false;
                 _animationView.IsVisible = false;
             }
 
@@ -89,7 +89,7 @@ namespace News.Controls
                     Source = null;
                     _animationView.AbortAnimation(GetHashCode().ToString());
                     _animationView.IsVisible = true;
-                    _animationView.Play();
+                    //_animationView.Play();
                 }
                 else
                 {
